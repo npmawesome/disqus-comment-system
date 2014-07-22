@@ -1435,7 +1435,8 @@ function dsq_hmacsha1($data, $key) {
 }
 
 function dsq_identifier_for_post($post) {
-    return $post->ID . ' ' . $post->guid;
+    // npmawesome: changed to post GUID only
+    return $post->guid;
 }
 
 function dsq_title_for_post($post) {
